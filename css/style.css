@@ -1,0 +1,14 @@
+ /* reset */
+ img,
+ svg,
+ picture,
+ video {
+     max-width: 100%;
+ }
+
+ ol li span{
+    cursor: pointer;
+     position: absolute;
+     right: 0;
+     margin-right: 10px;
+ }
