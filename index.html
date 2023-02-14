@@ -37,8 +37,11 @@
             add
         </button>
         <ol class="list-group list-group-numbered">
-            <li v-for="(compito, index) in materieFatte"
-            class="list-group-item">{{ compito.materia }}
+            <li v-for="(compito, index) in listaCompiti"
+                class="list-group-item"
+                :class="(compito.svolto) ? 'testoSbarrato' : ''">
+                <span @click="materiaSvolta(compito)">{{ compito.materia }}</span>
+                
                 <span class=" badge bg-primary rounded-pill"
                       @click="removeItem(index)">
                       x

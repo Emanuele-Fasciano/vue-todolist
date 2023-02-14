@@ -6,9 +6,14 @@
      max-width: 100%;
  }
 
- ol li span{
+.badge{
     cursor: pointer;
      position: absolute;
      right: 0;
      margin-right: 10px;
+ }
+
+
+ .testoSbarrato{
+    text-decoration: line-through;
  }

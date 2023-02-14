@@ -55,20 +55,16 @@ const app = Vue.createApp({
                 },
             ],
 
-            testoSbarrato: "text-decoration-line-through",
-
-            nuovoItem: {},
+            nuovoItem: {
+                materia: "",
+                svolto: false
+            },
 
         }
     },
 
     computed: {
-        materieFatte(){
-           return this.listaCompiti.filter((compito) =>{
-            return compito.svolto
-            
-           })
-        },
+
         
     },
 
@@ -80,11 +76,17 @@ const app = Vue.createApp({
 
         addItem(){
             const itemStatico = {
-                materia: this.nuovoItem.materia
+                materia: this.nuovoItem.materia,
+                svolto: false
             }
 
-            this.materieFatte.push(itemStatico)
-            
+            this.listaCompiti.push(itemStatico);
+
+            this.nuovoItem.materia = "";
+        },
+
+        materiaSvolta(compito){
+            compito.svolto = !compito.svolto
         }
 
     }
